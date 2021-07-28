@@ -28,21 +28,6 @@ const Frame = styled.button`
   left: 40%;
 `
 
-const Input = styled.input`
-
-  background-color: red;
-
-`
-
-const screen = styled.input`
-
-  color: red;
-
-`
-
-function clicked(){
-  alert("You've clicked me!! It hurts!");
-}
 
 function App() {
   return (
