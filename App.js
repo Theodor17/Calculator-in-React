@@ -1,71 +1,68 @@
+import { element } from 'prop-types';
 import React, {Component} from 'react';
 import styled from 'styled-components';
- 
-const Button = styled.button`
+import './App.css'
 
-  background-color: #7c7e80;
-  border-style: dashed;
-  color: orange;
-  height: 100px;
-  width: 100px;
-  font-size: 40px;
-  border-radius: 100px;
-  cursor: pointer;
-  
-  position: relative;
-  left: 10%;
-  top: 20%;
-`
+const box = () => {
+  <div className = "box">
+    <p> i'm a box</p>
+  </div>
+}
 
-const Frame = styled.button`
+const box2 = () => {
+  <div className = "box2">
 
-  width: 600px;
-  height: 500px;
-  background-color: #666362;
-  color: white;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-`
+  </div>
+}
 
 
 function App() {
   return (
-  
-    <div>
-  <Frame>
 
-    <div className = "row">
-      <Button>7</Button>
-      <Button>8</Button>
-      <Button>9</Button>
-      <Button>/</Button>
+
+    <div className = "box">
+
+  <div className = "box2">  
+
     </div>
 
-    <div className = "row">
-      <Button>4</Button>
-      <Button>5</Button>
-      <Button>6</Button>
-      <Button>*</Button>
-    </div>
+      <div className = "row">
 
-    <div className = "row">
-      <Button>1</Button>
-      <Button>2</Button>
-      <Button>3</Button>
-      <Button>-</Button>
-    </div>
+        <button className = "Button">7</button>
+        <button className = "Button">8</button>
+        <button className = "Button">9</button>
+        <button className = "Button">/</button>
 
-    <div className = "row">
-      <Button>.</Button>
-      <Button>0</Button>
-      <Button>=</Button>
-      <Button>+</Button>
-    </div>
+      </div>
 
-  </Frame>
-    </div>
+      <div className = "row">
 
+        <button className = "Button">4</button>
+        <button className = "Button">5</button>
+        <button className = "Button">6</button>
+        <button className = "Button">*</button>
+
+      </div>
+
+      <div className = "row">
+
+        <button className = "Button">1</button>
+        <button className = "Button">2</button>
+        <button className = "Button">3</button>
+        <button className = "Button">-</button>
+
+      </div>
+
+      <div className = "row">
+
+        <button className = "Button">.</button>
+        <button className = "Button">0</button>
+        <button className = "Button">=</button>
+        <button className = "Button">+</button>
+
+      </div>
+      
+    </div>
   );
 }
 
