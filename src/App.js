@@ -13,13 +13,13 @@ class App extends Component{
     }
   }
 
-  calculare = () =>{
+  calculare = () => {
 
     try{
-      const rezultat = eval(this.state.expresie)
-      this.setState =({expresie : rezultat})
+      const rezultat = eval(this.state.expresie);
+      this.setState = ({expresie : rezultat});
     }catch(e){
-      this.setState = ({expresie : 'error'})
+      this.setState = ({expresie : 'error'});
     }
   }
 
@@ -28,12 +28,15 @@ class App extends Component{
     const valoare = e.target.getAttribute('data-value');
     
     switch(valoare){
+
       case 'clear':
-        this.setState({expresie : ' '})
+        this.setState({expresie : ' '});
         break;
+
       case 'equal':
         this.calculare();
         break;
+
       default:
         this.setState({expresie : this.state.expresie + valoare});
     }
@@ -41,15 +44,13 @@ class App extends Component{
     
   }
 
-
-
   render(){
 
     return(
 
       <div className = "App">
 
-      <Display val = {this.state.val}/>
+      <Display val = {this.state.expresie}/>
 
         <Keypad>
 
@@ -86,7 +87,7 @@ class App extends Component{
 
       </div>
 
-    )
+    );
 
   }
 
