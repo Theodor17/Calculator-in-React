@@ -1,0 +1,22 @@
+.Button{
+
+    background-color: #34a4eb;
+    border: 1px solid black;
+    color: black;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    position: relative;
+    margin-top: 35%;
+    position: relative;
+    left: 55%;
+  
+  }
+
+.Button[data-value = "null"] {
+    pointer-events: none;
+}
