@@ -1,36 +1,37 @@
 import React, {Component} from 'react';
-import './App.css';
 import Button from './components/Button';
 import Display from './components/Display';
 import Keypad from './components/Keypad';
+import './App.css';
 
 class App extends Component{
 
   constructor(){
     super();
     this.state = {
-      expresie : ' '
-    }
+      expresie : ''
+    };
   }
 
   calculare = () => {
 
     try{
       const rezultat = eval(this.state.expresie);
-      this.setState = ({expresie : rezultat});
+      this.setState({expresie: ''});
+      this.setState ({expresie : rezultat});
     }catch(e){
-      this.setState = ({expresie : 'error'});
+      this.setState ({expresie : 'error'});
     }
   }
 
-  clickTriggered = e =>{
+  clickTriggered = (e) => {
     
     const valoare = e.target.getAttribute('data-value');
     
     switch(valoare){
 
       case 'clear':
-        this.setState({expresie : ' '});
+        this.setState({expresie : ''});
         break;
 
       case 'equal':
@@ -41,7 +42,6 @@ class App extends Component{
         this.setState({expresie : this.state.expresie + valoare});
     }
 
-    
   }
 
   render(){
