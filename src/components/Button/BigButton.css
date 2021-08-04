@@ -1,0 +1,22 @@
+.BigButton{
+
+    width: 244px;
+    height: 60px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: century-gothic, sans-serif;
+    border-radius: 5px;
+    font-size: 30px;
+
+    position: relative;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.BigButton[data-color]{
+    background-color: rgb(0, 217, 255);
+}
