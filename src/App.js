@@ -54,7 +54,7 @@ class App extends Component{
             valoare = 'log2(';
             break;
           
-          case '%':
+          case '/100':
             valoare = 'log10(';
             break;
           
@@ -198,7 +198,7 @@ class App extends Component{
 
 
       <div>
-        <Button onClick = {this.clickTriggered}  symbol = {percent_log10[this.state.index]} value = "%" id = "%" />
+        <Button onClick = {this.clickTriggered}  symbol = {percent_log10[this.state.index]} value = "/100" id = "%" />
         <Button onClick = {this.clickTriggered}  symbol = {divide_pow2[this.state.index]} value = "/" id = "/" />
         <Button onClick = {this.clickTriggered}  symbol = {mult_powx[this.state.index]} value = "*" id = "*" />
         <Button onClick = {this.clickTriggered}  symbol = {minus_sqrt[this.state.index]} value = "-" id = "-" />
