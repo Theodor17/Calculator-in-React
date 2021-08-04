@@ -35,7 +35,7 @@ class App extends Component{
       
     let temp = math.format(math.evaluate(this.state.expresie), {notation: 'fixed', precision: 10});
 
-    while(temp[temp.length - 1] == "0" || temp[temp.length - 1] == ".")
+    while((temp[temp.length - 1] == "0" && temp.length != 1)|| temp[temp.length - 1] == ".")
       temp = temp.substr(0, temp.length - 1);
       
       this.setState({expresie: temp});
